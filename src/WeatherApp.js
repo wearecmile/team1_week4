@@ -8,7 +8,6 @@ const WeatherApp = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -65,7 +64,7 @@ const WeatherApp = () => {
           <div>
             <h2>{weatherData?.name}</h2>
             <p>Temperature: {weatherData?.main?.temp} °C</p>
-            <p>Weather: {weatherData?.weather[0]?.main}</p>
+            <p>Weather: {weatherData?.weather?.at(0)?.main}</p>
           </div>
         )
       ) : (

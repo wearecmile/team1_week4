@@ -18,7 +18,7 @@ class WeatherProxy {
       const res = await axios.get(
         `${BASE_URL1_GEO}?q=${city}&appid=${API_KEY}`
       );
-      if (res?.data?.length == 0) {
+      if (res?.data?.length === 0) {
         return false;
       } else {
         const geoData = res?.data[0];
